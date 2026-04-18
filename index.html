@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divyansh Tuli | rewaywdivyansh — Climate Tech Content Creator</title>
+  <meta name="description" content="Divyansh Tuli (rewaywdivyansh) — Instagram creator making climate tech cool and profitable. I help sustainability startups grow their digital reach through content that actually connects." />
+  <meta name="keywords" content="climate tech creator, sustainability content creator, climate startup marketing, rewaywdivyansh, Divyansh Tuli, green tech social media, climate content India, sustainability influencer" />
+  <meta name="author" content="Divyansh Tuli" />
+  <meta property="og:title" content="Divyansh Tuli | Making Climate Tech Cool" />
+  <meta property="og:description" content="From building an e-waste startup to helping climate tech companies grow — I make sustainability simple, compelling, and scroll-stopping." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0d1208;
+      --cream: #f5f0e8;
+      --green: #2d5a27;
+      --green-mid: #4a7c42;
+      --green-light: #8fbf7a;
+      --accent: #c8e63c;
+      --warm: #e8dcc8;
+      --text-muted: #6b7561;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* ── STICKY SOCIAL DOCK ── */
+    .social-dock {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .social-dock a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+
+    .social-dock a:hover {
+      background: var(--accent);
+      transform: scale(1.12);
+    }
+
+    .social-dock a svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--cream);
+      transition: fill 0.25s;
+    }
+
+    .social-dock a:hover svg { fill: var(--ink); }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(245, 240, 232, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(45,90,39,0.1);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 96vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 80px 48px 60px;
+      gap: 60px;
+      position: relative;
+    }
+
+    .hero-text { position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 500;
+      margin-bottom: 20px;
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+
+    .hero-sub strong { color: var(--ink); font-weight: 500; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: var(--cream);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.25s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      color: var(--green);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1.5px solid var(--green);
+      margin-left: 12px;
+      transition: all 0.25s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--green);
+      color: var(--cream);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-badge-wrap {
+      position: relative;
+      width: 360px;
+      height: 360px;
+    }
+
+    .hero-ring {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-ring::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, var(--green-light) 0%, var(--green) 60%);
+    }
+
+    .hero-ring-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero-ring-inner .big-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+    }
+
+    .hero-ring-inner .big-label {
+      color: var(--cream);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .floating-tag {
+      position: absolute;
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    .tag-1 { top: 20px; right: -20px; }
+    .tag-2 { bottom: 30px; left: -30px; }
+    .tag-3 { top: 50%; right: -40px; transform: translateY(-50%); }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      background: var(--green);
+      padding: 18px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-track span {
+      color: var(--accent);
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 0 28px;
+      flex-shrink: 0;
+    }
+
+    .marquee-track span.sep {
+      color: rgba(200, 230, 60, 0.3);
+      padding: 0;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    section { position: relative; z-index: 1; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    /* ── STORY ── */
+    #story {
+      padding: 100px 0;
+      background: var(--warm);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-left { padding-top: 8px; }
+
+    .story-right p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .story-right p strong { color: var(--ink); font-weight: 500; }
+
+    .story-right p:first-of-type {
+      font-size: 1.2rem;
+      color: var(--ink);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .pull-quote {
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 32px 0;
+      background: rgba(200,230,60,0.08);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem !important;
+      color: var(--green) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.5 !important;
+    }
+
+    /* ── WHAT I DO ── */
+    #services {
+      padding: 100px 0;
+    }
+
+    .services-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      padding: 36px 32px;
+      border: 1px solid rgba(45,90,39,0.15);
+      border-radius: 8px;
+      background: #fff;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--green-light);
+      transition: background 0.25s;
+    }
+
+    .service-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 8px 32px rgba(45,90,39,0.1);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before { background: var(--accent); }
+
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--warm);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    /* ── WHY ── */
+    #why {
+      padding: 100px 0;
+      background: var(--green);
+    }
+
+    #why .section-label { color: var(--accent); }
+    #why .section-title { color: var(--cream); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 60px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(200,230,60,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+    }
+
+    .why-text h4 {
+      color: var(--cream);
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .why-text p {
+      color: rgba(245,240,232,0.65);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ── CTA ── */
+    #contact {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .cta-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    #contact .section-title {
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .cta-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.25s;
+    }
+
+    .cta-link.ig {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+    }
+
+    .cta-link.wa {
+      background: #25D366;
+      color: white;
+    }
+
+    .cta-link.em {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .cta-link:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    .cta-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 28px 48px;
+      border-top: 1px solid rgba(45,90,39,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 60px 24px 40px; gap: 40px; min-height: auto; }
+      .hero-visual { justify-content: flex-start; }
+      .hero-badge-wrap { width: 280px; height: 280px; }
+      .hero-ring { width: 280px; height: 280px; }
+      .hero-ring-inner .big-num { font-size: 3.8rem; }
+      .story-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
+      .section-inner { padding: 0 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .why-grid { grid-template-columns: 1fr; gap: 32px; }
+      .social-dock { right: 14px; }
+      .social-dock a { width: 38px; height: 38px; }
+      .cta-links { flex-direction: column; align-items: center; }
+      footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px; }
+      .tag-1, .tag-2, .tag-3 { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY SOCIAL DOCK -->
+  <aside class="social-dock" aria-label="Social links">
+    <a href="https://instagram.com/rewaywdivyansh" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/917290908877" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+    <a href="mailto:divyanshtuli25@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">rewaywdivyansh</a>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#services">What I Do</a></li>
+      <li><a href="#why">Why It Matters</a></li>
+      <li><a href="#contact">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Climate Tech Creator · rewaywdivyansh</span>
+      <h1 class="hero-headline">Making<br><em>Climate Tech</em><br>Actually Cool.</h1>
+      <p class="hero-sub">I'm <strong>Divyansh Tuli</strong> — a content creator helping sustainability startups cut through the noise. I turn complex climate science into scroll-stopping stories your audience actually understands.</p>
+      <a href="#contact" class="btn-primary">Work With Me</a>
+      <a href="#story" class="btn-secondary">My Story</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-badge-wrap">
+        <div class="hero-ring">
+          <div class="hero-ring-inner">
+            <span class="big-num">∞</span>
+            <span class="big-label">Impact Through Awareness</span>
+          </div>
+        </div>
+        <span class="floating-tag tag-1">🌱 Climate Content</span>
+        <span class="floating-tag tag-2">♻️ E-Waste Founder</span>
+        <span class="floating-tag tag-3">📲 Instagram Creator</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Climate Tech</span><span class="sep">·</span>
+      <span>Sustainability Marketing</span><span class="sep">·</span>
+      <span>Green Startups</span><span class="sep">·</span>
+      <span>Digital Reach</span><span class="sep">·</span>
+      <span>rewaywdivyansh</span><span class="sep">·</span>
+      <span>Content That Converts</span><span class="sep">·</span>
+      <span>E-Waste Awareness</span><span class="sep">·</span>
+      <span>Climate is Cool</span><span class="sep">·</span>
+      <span>Climate Tech</span><span class="sep">·</span>
+      <span>Sustainability Marketing</span><span class="sep">·</span>
+      <span>Green Startups</span><span class="sep">·</span>
+      <span>Digital Reach</span><span class="sep">·</span>
+      <span>rewaywdivyansh</span><span class="sep">·</span>
+      <span>Content That Converts</span><span class="sep">·</span>
+      <span>E-Waste Awareness</span><span class="sep">·</span>
+      <span>Climate is Cool</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="section-inner">
+      <div class="story-grid">
+        <div class="story-left fade-up">
+          <p class="section-label">The Origin Story</p>
+          <h2 class="section-title">From Building a Startup to Building a Movement</h2>
+        </div>
+        <div class="story-right">
+          <p class="fade-up">Back in college, I co-founded <strong>Rewaysoft Technologies Pvt Ltd</strong> — an e-waste management company. I was deep in the problem: mountains of discarded electronics, toxic supply chains, systems nobody wanted to fix.</p>
+          <div class="pull-quote fade-up">
+            <p>"Climate tech can't grow until it's made cool and profitable. Awareness isn't optional — it's the whole game."</p>
+          </div>
+          <p class="fade-up">That realization changed my path. The real bottleneck wasn't technology — it was <strong>perception</strong>. Climate solutions existed. What was missing was the storytelling that made people care, share, and buy in.</p>
+          <p class="fade-up">So I took everything I learned as a founder — the hustle, the research, the urgency — and built <strong>rewaywdivyansh</strong>: a content brand that explains climate tech in plain, powerful words. Now I channel that founder's lens into content that helps sustainability startups find their audience and grow their digital reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="services-header">
+        <div>
+          <p class="section-label fade-up">What I Do</p>
+          <h2 class="section-title fade-up">Content That Grows<br>Climate Startups</h2>
+        </div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-num">01</div>
+          <h3 class="service-title">Social Media Content</h3>
+          <p class="service-desc">Instagram reels, carousels, captions, and hooks crafted specifically for climate tech audiences. Content that educates and converts — not just looks good.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">02</div>
+          <h3 class="service-title">Website Copywriting</h3>
+          <p class="service-desc">SEO-friendly web copy that tells your startup's story with authority. From landing pages to about sections — words that build trust and rank on Google.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">03</div>
+          <h3 class="service-title">Brand Positioning</h3>
+          <p class="service-desc">Strategy and messaging that places your climate startup in the right niche. I help you stand out in a growing market that's increasingly crowded with purpose-washing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section id="why">
+    <div class="section-inner" style="padding-top: 100px; padding-bottom: 100px;">
+      <p class="section-label fade-up">Why It Matters</p>
+      <h2 class="section-title fade-up" style="max-width:560px;">The Climate Crisis is a Communication Crisis Too</h2>
+      <div class="why-grid">
+        <div class="why-item fade-up">
+          <div class="why-icon">🌍</div>
+          <div class="why-text">
+            <h4>The Tech Already Exists</h4>
+            <p>Solar, EVs, circular economy solutions — the innovations are here. What's lagging is mainstream awareness and adoption. That's a content problem.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">📣</div>
+          <div class="why-text">
+            <h4>Startups Need Believers, Not Just Users</h4>
+            <p>Climate startups need communities that champion them. Digital content builds that tribe — before, during, and after product launch.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">💡</div>
+          <div class="why-text">
+            <h4>Simple = Powerful</h4>
+            <p>If your audience can't explain your product to a friend, you've lost them. I translate technical innovations into relatable, shareable language.</p>
+          </div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">📈</div>
+          <div class="why-text">
+            <h4>Green is a Growing Market</h4>
+            <p>The global climate tech market is booming. The brands that build strong digital presence now will own the conversation — and the customers — tomorrow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="cta-wrap">
+        <p class="section-label fade-up">Let's Build Something</p>
+        <h2 class="section-title fade-up">Ready to Grow Your<br>Climate Brand?</h2>
+        <p class="fade-up">Whether you're a sustainability startup looking for content strategy, a founder wanting to build your personal brand, or a brand ready to reach the climate-conscious generation — I'd love to connect.</p>
+        <div class="cta-links fade-up">
+          <a class="cta-link ig" href="https://instagram.com/rewaywdivyansh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @rewaywdivyansh
+          </a>
+          <a class="cta-link wa" href="https://wa.me/919999999999" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a class="cta-link em" href="mailto:hello@divyanshtuli.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Divyansh Tuli · <a href="https://instagram.com/rewaywdivyansh" target="_blank" rel="noopener">rewaywdivyansh</a></p>
+    <p>Climate is the story of our generation. Let's tell it well.</p>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
